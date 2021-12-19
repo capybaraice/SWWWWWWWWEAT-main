@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--css bootstrap巴拉巴拉-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!--我的css-->
+  <link href="css/agency.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+  <!--選單-->
+  <ul class="navigation">
+    <li class="nav-item"><a href="#">Home</a></li>
+    <li class="nav-item"><a href="#">Portfolio</a></li>
+    <li class="nav-item"><a href="#">About</a></li>
+    <li class="nav-item"><a href="#">Blog</a></li>
+    <li class="nav-item"><a href="#">Contact</a></li>
+  </ul>
+
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+
+
+  <nav class="navbar navbar-expand-sm fixed-top">
+    <label for="nav-trigger"></label>
+    <h1>Doki Doki SWEET100%</h1>
+  </nav>
+
+  <div class="site-wrap" >
+    <!--網頁內容-->
+
+    <!-- insert the rest of your page markup here -->
+
+    <!--起始圖片-->
+    <div class="container">
+      <img class="img-fluid" id="main_picture" src="img/lemonSheBa.png" alt="main picture">
+    </div>
+
+    <!--介紹-->
+    <div class="container pt-5 text-center intro">
+      <div class="row">
+        <div class="col">
+        <p>ドキドキ甜點100%網站開設的靈感是來自於一位偶爾會做甜點的組員，<br><br>會做一些小甜點，現在的人們看到造型蛋糕、手工餅乾等，<br><br>光是用看的就讓人賞心悅目，而甜點不只是食物
+         ，<br><br>更是可以療癒心靈的商品，所以我們主打以精緻小巧，打動消費者的消費慾望，<br><br>更可以達到心理或是情感滿足的「魅力商品」，更加注重對商品的精緻性及情感，<br><br>
+         這也是我們網站名稱的由來，讓消費者從心底對甜點100%的動心，達到購買的慾望。</p>
+        </div>
+      </div>
+    </div>
+
+    <!--旋轉木馬-->
+    <div id="Spin_horse" class="carousel slide container-sm" data-ride="carousel">
+
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://kurokimingz.github.io/20211209/image/dessert_2.jpg" alt="Los Angeles" width="1100"
+            height="500">
+        </div>
+        <div class="carousel-item">
+          <img src="https://kurokimingz.github.io/20211209/image/dessert_3.jpg" alt="Chicago" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+          <img src="https://kurokimingz.github.io/20211209/image/dessert_4.jpg" alt="New York" width="1100"
+            height="500">
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#Spin_horse" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#Spin_horse" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </div>
+
+
+
+
+</body>
+
+</html>
