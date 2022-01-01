@@ -9,153 +9,117 @@ p {
 body {
   margin-top: 0px;
   margin-bottom: 0px;
+  background-color:#f8dfb0;
 
   	/* Without this, the body has excess horizontal scroll when the menu is open */
   overflow-x: hidden;
   
 }
-h1 {
-  font-size:x-large;
+
+/**navbar**/
+/* Create a sticky/fixed navbar */
+#navbar {
+  overflow: hidden;
+  background-color: #ecb96c;
+  padding: 20px 10px; /* Large padding which will shrink on scroll (using JS) */
+  transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+  position: fixed; /* Sticky/fixed navbar */
+  width: 100%;
+  top: 0; /* At the top */
+  z-index: 99;
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
   color: rgb(255, 255, 255);
   text-align: center;
-  
-}
-
-#main_picture{
-
-}
-  
-
-#Spin_horse{
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-
-
-.navbar a {
-  text-align: left;
-}
-
-.carousel-inner img {
-  width: 100%;
-  height: 100%;
-}
-
-.navbar{ 
-  display: flex;/*置中*/
-  justify-content: center; 
-  align-items: center; 
-  height: 55px;
-  background: #f0be62;
- 
-}
-
-/**/
-/* Navigation Menu - Background */
-.navigation {
-  /* critical sizing and position styles */
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 55px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 0;
-  
-  /* non-critical appearance styles */
-  list-style: none;
-  background: #f0be62;
-
-}
-
-/* Navigation Menu - List items */
-.nav-item {
-  /* non-critical appearance styles */
-  width: 200px;
-  
-}
-
-.nav-item a {
-  /* non-critical appearance styles */
-  display: block;
-  padding: 1em;
-  background:  #f0be62;/*color*/
-  color: white;
-  font-size: 1.2em;
+  padding: 12px;
   text-decoration: none;
-  transition: color 0.2s, background 0.5s;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
 }
 
-.nav-item a:hover {
-  color: #c74438;
-  background: linear-gradient(270deg, #f0be62 0%,#d8ab57 100%);
+/* Style the logo */
+#navbar #logo {
+  float: none;
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+/* Links on mouse-over */
+#navbar #navbar-right a:hover {
+  color: rgb(114, 83, 53);
 }
 
 
-/* Site Wrapper - Everything that isn't navigation */
-.site-wrap {
-  /* Critical position and size styles */
-  min-height: 100%;
-  min-width: 100%;
-  background-color: white; /* Needs a background or else the nav will show through */
-  background-image:url(https://cdn-img.look-in.com.tw/upload/images/43025536_629355787482650_6574677862894309519_n.jpg);
+
+/* Display some links to the right */
+#navbar-right {
+  font-weight: bold;
+  float: right;
+}
+
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 10px 5px ; /*   Use !important to make sure that JavaScript doesn't override the padding on small screens */
+  }
+  #navbar a {
+    float: none;
+    
+    text-align: right;
+    font-size: 15px;
+  }
+  #navbar-right {
+    float: right;
+  }
+}
+  /*sidenav*/
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+  }
   
-
-
-  position: relative;
-  top: 0;
-  bottom: 100%;
-  left: 0;
-  z-index: 1;
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.4s;
+  }
   
-  /* non-critical apperance styles */
-  padding: 0em;
-}
-
-/* Nav Trigger */
-.nav-trigger {
-  /* critical styles - hide the checkbox input */
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-}
-
-label[for="nav-trigger"] {
-  /* critical positioning styles */
-  position: fixed;
-  left: 15px; top: 15px;
-  z-index: 2;
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
   
-  /* non-critical apperance styles */
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
-  background-size: contain;
-}
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    transition: margin-left .4s;
 
-/* Make the Magic Happen */
-.nav-trigger + label, .site-wrap,.navbar {
-  transition: left 0.2s;
-}
+    
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
 
-.nav-trigger:checked + label {
-  left: 215px;
-}
-
-.nav-trigger:checked ~ .site-wrap {
-  left: 200px;
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.123);
-}
-/* Additional non-critical styles */
-
-
-code {
-	padding: 2px;
-	background: #ddd;
-}
-
-/* Micro reset */
-*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
-html, body { height: 100%; width: 100%; font-family: Helvetica, Arial, sans-serif; }
