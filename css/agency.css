@@ -1,26 +1,35 @@
 p {
   color: rgb(73, 73, 73);
-  text-align: center;
-  margin-right: 100px;
-  margin-left: 100px;
+  text-align: justify;
   font-weight:bold;
   font-size: 1.2em;
+ line-height: 25px;
  }
 body {
+  
   margin-top: 0px;
   margin-bottom: 0px;
-  background-color:#f8dfb0;
+  background-color:#ffffff;
 
   	/* Without this, the body has excess horizontal scroll when the menu is open */
   overflow-x: hidden;
   
 }
-
+#logo_picture{
+  width: 200px;
+  height: 200px;
+}
 /**navbar**/
 /* Create a sticky/fixed navbar */
 #navbar {
+  background-image:url("../img/05.png");
+  background-size:110px 80px;
+  background-repeat: no-repeat;
+  background-position:center right;
+
+  border-bottom: solid;
   overflow: hidden;
-  background-color: #ecb96c;
+  background-color: #ffffff;
   padding: 20px 10px; /* Large padding which will shrink on scroll (using JS) */
   transition: 0.4s; /* Adds a transition effect when the padding is decreased */
   position: fixed; /* Sticky/fixed navbar */
@@ -32,7 +41,7 @@ body {
 /* Style the navbar links */
 #navbar a {
   float: left;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -64,6 +73,12 @@ body {
 
 /* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
 @media screen and (max-width: 580px) {
+
+/**mystuff**/
+p {
+  font-size: 1.0em;
+ }
+
   #navbar {
     padding: 10px 5px ; /*   Use !important to make sure that JavaScript doesn't override the padding on small screens */
   }
